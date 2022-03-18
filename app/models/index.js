@@ -23,5 +23,6 @@ db.sequelize = sequelize;
 
 db.sites = require("./site.model.js")(sequelize, Sequelize);
 db.notes = require("./note.model.js")(sequelize, Sequelize);
+db.user = require("./user.model.js")(sequelize, Sequelize);
 
 module.exports = db;

@@ -19,12 +19,16 @@ app.use(Sentry.Handlers.requestHandler());
 const db = require("./app/models");
 db.sequelize.sync();
 
+// var corsOptions = {
+//   origin: [
+//     "http://localhost:3000",
+//     "http://localhost:3001",
+//     "https://app.yibanchen.com",
+//     "https://dev.yibanchen.com",
+//   ],
+// };
 var corsOptions = {
-  origin: [
-    "http://localhost:3000",
-    "https://app.yibanchen.com",
-    "https://dev.yibanchen.com",
-  ],
+  origin: '*',
 };
 
 app.use(cors(corsOptions));
@@ -56,6 +60,7 @@ app.get("/", (req, res) => {
 
 require("./app/routes/site.routes")(app);
 require("./app/routes/note.routes")(app);
+require("./app/routes/user.routes")(app);
 require("./app/routes/errorlog.routes")(app);
 
 app.use(Sentry.Handlers.errorHandler());
