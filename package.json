@@ -34,7 +34,7 @@
     "sequelize-test-helpers": "^1.4.1",
     "sinon": "^11.1.2",
     "sinon-chai": "^3.7.0",
-    "sqlite3": "^5.0.2",
+    "sqlite3": "^5.0.3",
     "winston": "^3.3.3"
   }
 }
